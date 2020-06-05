@@ -1,12 +1,12 @@
 #!/bin/bash
-groupadd ubuntu
-useradd -g ubuntu -G admin -s /bin/bash -d /home/ubuntu ubuntu
-mkdir -p /home/ubuntu
-cp -r /root/.ssh /home/ubuntu/.ssh
-chown -R ubuntu:ubuntu /home/ubuntu
-echo "ubuntu ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+groupadd girish
+useradd -g girish -G admin -s /bin/bash -d /home/girish girish
+mkdir -p /home/girish
+cp -r /root/.ssh /home/girish/.ssh
+chown -R girish:girish /home/girish
+echo "girish ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # create .kube/config
-mkdir -p ~ubuntu/.kube
-cp -i /etc/kubernetes/admin.conf ~ubuntu/.kube/config
-chown ubuntu:ubuntu ~ubuntu/.kube/config
+mkdir -p ~girish/.kube
+cp -i /etc/kubernetes/admin.conf ~girish/.kube/config
+chown girish:girish ~girish/.kube/config
